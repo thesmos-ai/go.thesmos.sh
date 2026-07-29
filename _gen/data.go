@@ -133,6 +133,11 @@ var modules = []Module{
 		Public:      true,
 	},
 	{
+		Name:        "service",
+		Description: "Service generators for Golang gRPC services.",
+		Public:      false,
+	},
+	{
 		Name:        "techne",
 		Description: "Atomic, build-gated developer tools for AI coding agents: type-checked refactors, semantic search, and verify→fix loops over MCP, CLI, and TUI.",
 		Public:      true,
