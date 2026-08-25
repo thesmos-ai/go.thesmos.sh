@@ -76,48 +76,48 @@ var modules = []Module{
 		Public:      true,
 		Subs: []Sub{
 			{
-				Name:        "backend/golang",
-				Description: "Go emitter for eidos — renders the IR back to deterministic Go source.",
-				Public:      true,
-			},
-			{
 				Name:        "bridge/protogo",
-				Description: "Protobuf↔Go bridge for eidos — interop between the two frontends.",
+				Description: "Protobuf→Go bridge annotator for eidos — stamps Go-namespaced translation metadata so the Go backend stays proto-agnostic.",
 				Public:      true,
 			},
 			{
 				Name:        "cli",
-				Description: "Command-line driver for eidos pipelines.",
+				Description: "Command kernels for eidos — run, plan, explain, check, prune, version.",
 				Public:      true,
 			},
 			{
 				Name:        "cmd/eidos-reference",
-				Description: "Reference-runner binary for eidos — exercises the reference plugin pipeline end-to-end.",
+				Description: "Reference-runner binary for eidos — exercises the in-tree plugin ensemble end-to-end.",
 				Public:      true,
 			},
 			{
 				Name:        "eidostest",
-				Description: "Plugin test harness for eidos — golden-output and byte-determinism checks.",
+				Description: "Test harnesses for eidos plugin, frontend and backend authors — golden-output diffing and conformance suites.",
 				Public:      true,
 			},
 			{
-				Name:        "frontend/golang",
-				Description: "Go source frontend for eidos — parses Go into the typed IR.",
+				Name:        "lang/golang",
+				Description: "Go language module for eidos — shared Go conventions plus the frontend, the renderer, and the SDK a Go-generating plugin embeds.",
 				Public:      true,
 			},
 			{
-				Name:        "frontend/protobuf",
-				Description: "Protobuf frontend for eidos — parses .proto descriptors into the typed IR.",
+				Name:        "lang/protobuf",
+				Description: "Protobuf language module for eidos — a proto3 frontend turning descriptors into the typed IR. Proto is read, never written.",
+				Public:      true,
+			},
+			{
+				Name:        "lang/typescript",
+				Description: "TypeScript language module for eidos — shared conventions plus a tree-sitter frontend over .ts and .tsx.",
 				Public:      true,
 			},
 			{
 				Name:        "plugins",
-				Description: "Bundled plugin set for eidos pipelines.",
+				Description: "Production plugin set for eidos — signature-shape annotation plus the builder, enum and sentinel generators.",
 				Public:      true,
 			},
 			{
 				Name:        "reference",
-				Description: "Reference plugin and worked-example pipeline for eidos.",
+				Description: "Reference plugins for eidos, kept runnable as worked examples.",
 				Public:      true,
 			},
 		},
